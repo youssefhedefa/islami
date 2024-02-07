@@ -18,4 +18,9 @@ abstract class AppTheme{
       fontWeight: FontWeight.w400,
       color: AppColors.lightBlack
   );
+  static const TextStyle semiBoldNumberTextStyle = TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.w600,
+    color: AppColors.lightBlack,
+  );
 }
