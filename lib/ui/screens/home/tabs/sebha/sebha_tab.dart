@@ -22,15 +22,27 @@ class _SebhaTabState extends State<SebhaTab> {
     return Align(
       alignment: Alignment.topCenter,
       child: Column(
+        mainAxisSize: MainAxisSize.max,
         children: [
-          Expanded(
-            child: Transform.rotate(
-              angle: _rotateAngle,
-              child: Image.asset(
-                AppAssets.seb7aImageLogo,
+          Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Image.asset(
+                AppAssets.seb7aHeadImageLogo,
+                height: 120,
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.only(top: 90.0),
+                child: Transform.rotate(
+                  angle: _rotateAngle,
+                  child: Image.asset(
+                    AppAssets.seb7aBodyImageLogo,
+                  ),
+                ),
+              ),
+            ],
           ),
+          const SizedBox(height: 30,),
           Expanded(
             child: Column(
               children: [

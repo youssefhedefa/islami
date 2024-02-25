@@ -18,7 +18,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentTabIndex = 0;
-  Widget body = QuranTab();
+  Widget body = const QuranTab();
 
   @override
   Widget build(BuildContext context) {
@@ -59,13 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: (index) {
             currentTabIndex = index;
             if (currentTabIndex == 0) {
-              body = QuranTab();
+              body = const QuranTab();
             } else if (currentTabIndex == 1) {
-              body = AhadethTab();
+              body = const AhadethTab();
             } else if (currentTabIndex == 2) {
-              body = SebhaTab();
+              body = const SebhaTab();
             } else {
-              body = RadioTab();
+              body = const RadioTab();
             }
             setState(() {});
           },
